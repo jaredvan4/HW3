@@ -8,17 +8,23 @@ using namespace std;
 int main(int argc, char* argv[]){
 	// below we take in how many disks the user wants sorted, then push them all to the 1st "pole".
 	int disks;
-	LLStack source = LLStack();
-	LLStack pole2 = LLStack();
-	LLStack pole3 = LLStack();	
+	LLStack A = LLStack();
+	LLStack B = LLStack();
+	LLStack C = LLStack();	
 	cout << "Enter the amount of disks:\n";
 	cin >> disks;
 	for (int i = disks; i > 0; i--) {
-		source.PUSH(i);
-		cout << "pushing disk " << i << " to stack 1\n";
+		A.PUSH(i);
+		cout << "pushing disk " << i << " to stack A\n";
 	}
 	int moves = pow(2, disks)-1;
 	cout << "Number of moves " << moves << "\n";
+	if (moves % 2 == 0) {
+
+	}
+	else {
+
+	}
 	
 }
 void hanoi(LLStack src, LLStack dest, LLStack outer, int disks) {
@@ -27,6 +33,11 @@ void hanoi(LLStack src, LLStack dest, LLStack outer, int disks) {
 		LLStack temp(dest);
 
 	}
+}
+//decides how to move disk while adhering to the constraints of the problem
+void makeValidMove(int pole1, int pole2)
+{
+	return;
 }
 
 void moveDisk(LLStack src, LLStack dest){
