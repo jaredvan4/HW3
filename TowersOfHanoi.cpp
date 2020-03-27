@@ -35,8 +35,7 @@ void hanoi(LLStack src, LLStack dest, LLStack outer, int disks) {
 	}
 }
 //decides how to move disk while adhering to the constraints of the problem
-void makeValidMove(int pole1, int pole2)
-{
+void makeValidMove(int pole1, int pole2){
 	return;
 }
 
