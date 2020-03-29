@@ -6,8 +6,13 @@
 #include "LLStack.h"
 using namespace std;
 
-LLStack::LLStack() {
+string LLStack::getName()
+{
+	return name;
+}
 
+LLStack::LLStack(string input) {
+	name = input;
 	head = NULL;
 }
 
@@ -22,13 +27,17 @@ void LLStack::PUSH(int s) {
 }
 
 int LLStack::POP() {
-
-	StackNode* h = head;
-	head = h->getnext();
-	h->setnext(NULL);
-	int s = h->getS();
-	delete h;
-	return s;
+	if (ISEMPTY()) {
+		return -10;
+	}
+	else {
+		StackNode* h = head;
+		head = h->getnext();
+		h->setnext(NULL);
+		int s = h->getS();
+		delete h;
+		return s;
+	}
 }
 
 bool LLStack::ISEMPTY() {

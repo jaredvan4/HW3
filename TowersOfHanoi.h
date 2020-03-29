@@ -1,5 +1,5 @@
 //Jared VanEnkevort
+//contains the prototypes for all functions present in TowersOfHanoi.cpp
 #pragma once
-void moveDisk(LLStack src, LLStack dest);
-void hanoi(LLStack src, LLStack dest, LLStack outer, int disk);
-void makeValidMove(int pole1, int pole2);
+void makeValidMove(LLStack stack1, LLStack stack2);
+void printMove(string src, string dest, int diskNum);
