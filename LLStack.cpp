@@ -11,8 +11,7 @@ string LLStack::getName()
 	return name;
 }
 
-LLStack::LLStack(string input) {
-	name = input;
+LLStack::LLStack() {
 	head = NULL;
 }
 

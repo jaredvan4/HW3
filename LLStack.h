@@ -15,7 +15,7 @@ private:
 	StackNode* head;
 public:
 	string getName();
-	LLStack(string name);
+	LLStack();
 	~LLStack();
 	void PUSH(int s);
 	int POP();
