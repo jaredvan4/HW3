@@ -26,17 +26,12 @@ void LLStack::PUSH(int s) {
 }
 
 int LLStack::POP() {
-	if (ISEMPTY()) {
-		return -10;
-	}
-	else {
 		StackNode* h = head;
 		head = h->getnext();
 		h->setnext(NULL);
 		int s = h->getS();
 		delete h;
 		return s;
-	}
 }
 
 bool LLStack::ISEMPTY() {
