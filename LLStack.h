@@ -11,11 +11,12 @@ using namespace std;
 class StackNode;
 class LLStack {
 private:
-	string name;
+	int num;
 	StackNode* head;
 public:
-	string getName();
+	int getNum();
 	LLStack();
+	LLStack(int newNum);
 	~LLStack();
 	void PUSH(int s);
 	int POP();

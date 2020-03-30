@@ -10,7 +10,7 @@ int main(int argc, char* argv[]) {
 	int disks;
 	LLStack poles[3];
 	for (int i = 0; i < 3; i++) {
-		poles[i] = LLStack();
+		poles[i] = LLStack(i+1);
 	}
 	cout << "Enter the amount of disks:\n";
 	cin >> disks;
@@ -30,7 +30,7 @@ int main(int argc, char* argv[]) {
 	}
 	//depending on what iteration of moves we are on, move disks from and to specific poles
 	int moveCt = 1;
-	while (poles[0].ISEMPTY()&& poles[1].ISEMPTY()) {
+	while (!poles[0].ISEMPTY()&& !poles[1].ISEMPTY()) {
 		if (moveCt % 2 == 0) {
 
 		}
@@ -46,8 +46,9 @@ int main(int argc, char* argv[]) {
 void makeValidMove(LLStack from, LLStack to) {
 	int disk = from.POP();
 	to.PUSH(disk);
+	printMove(from.getNum(), to.getNum(), disk);
 }
 
-void printMove(int src, int dest, int diskNum) {
-	cout << "moved disk " << diskNum << " from " << src << " to " << dest << "\n";
+void printMove(int from, int to, int diskNum) {
+	cout << "moved disk " << diskNum << " from " << from << " to " << to << "\n";
 }

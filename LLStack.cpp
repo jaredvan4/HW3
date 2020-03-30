@@ -6,9 +6,9 @@
 #include "LLStack.h"
 using namespace std;
 
-string LLStack::getName()
+int LLStack::getNum()
 {
-	return name;
+	return num;
 }
 
 LLStack::LLStack() {
@@ -16,8 +16,11 @@ LLStack::LLStack() {
 }
 
 LLStack::~LLStack() {
-
 	delete head;
+}
+LLStack::LLStack(int newNum) {
+	head = NULL;
+	num = newNum;
 }
 
 void LLStack::PUSH(int s) {
