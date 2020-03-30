@@ -8,6 +8,8 @@ using namespace std;
 int main(int argc, char* argv[]) {
 	// below we take in how many disks the user wants sorted, then push them all to the 1st "pole".
 	int disks;
+	int disk1Loc = -1;
+	int direction = 0;
 	LLStack poles[3];
 	for (int i = 0; i < 3; i++) {
 		poles[i] = LLStack(i+1);
@@ -23,19 +25,41 @@ int main(int argc, char* argv[]) {
 	cout << "Number of moves " << moves << "\n";
 	if (disks % 2 == 0) {
 		makeValidMove(poles[0],poles[1]);
+		int disk1Loc = 1;
+		int direction = 1;
 	}
 	else{
 		makeValidMove(poles[0],poles[2]);
-
+		int disk1Loc = 2;
+		int direction = -1;
 	}
 	//depending on what iteration of moves we are on, move disks from and to specific poles
-	int moveCt = 1;
+	int moveCt = 2;
 	while (!poles[0].ISEMPTY()&& !poles[1].ISEMPTY()) {
 		if (moveCt % 2 == 0) {
+			
 
 		}
+		//if move # is odd
 		else {
-
+			if (direction == -1) {
+				//move disk left
+				if (disk1Loc == 0) {
+					makeValidMove(poles[disk1Loc], poles[2]);
+					disk1Loc = 2;
+				}
+				else {
+					makeValidMove(poles[disk1Loc], poles[disk1Loc - 1]);
+					disk1Loc = disk1Loc - 1;
+				}
+			}
+			else {
+				//move disk right
+				if (disk1Loc == 2) {
+					makeValidMove(poles[disk1Loc], poles[0]);
+					disk1Loc = 0;
+				}
+			}
 		}
 
 		moveCt++;
