@@ -48,7 +48,7 @@ void makeValidMove(LLStack from, LLStack to) {
 	to.PUSH(disk);
 	printMove(from.getNum(), to.getNum(), disk);
 }
-
+//prints a move made from one pole to another
 void printMove(int from, int to, int diskNum) {
-	cout << "moved disk " << diskNum << " from " << from << " to " << to << "\n";
+	cout << "moved disk " << diskNum << " from pole " << from << " to pole " << to << "\n";
 }
