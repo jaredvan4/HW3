@@ -1,4 +1,5 @@
 //Jared VanEnkevort
+//contains the prototypes for all functions present in StackNode.cpp
 #ifndef _STACKNODE_
 #define _STACKNODE_
 

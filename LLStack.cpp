@@ -1,4 +1,6 @@
 //Jared VanEnkevort
+//contains the function definitions for the prototypes present in LLStack.h
+
 #include <iostream>
 #include <string>
 #include <cstdlib>
@@ -13,6 +15,7 @@ int LLStack::getNum()
 
 LLStack::LLStack() {
 	head = NULL;
+	num = NULL;
 }
 
 LLStack::~LLStack() {

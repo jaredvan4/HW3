@@ -1,4 +1,5 @@
 //Jared VanEnkevort
+//contains the function definitions for the prototypes present in StackNode.h
 #include <iostream>
 #include <string>
 #include <cstdlib>

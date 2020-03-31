@@ -1,4 +1,5 @@
 //Jared VanEnkevort
+//contains the prototypes for all functions present in LLStack.cpp
 #ifndef _LLSTACK_
 #define _LLSTACK_
 
